@@ -4,7 +4,7 @@ import { globalIgnores } from "eslint/config";
 export default tseslint.config(
   tseslint.configs.strictTypeChecked,
   tseslint.configs.stylisticTypeChecked,
-  globalIgnores(["bin", "dist", "./*.js", "./*.mjs", "./*.cjs", "./*.ts"]),
+  globalIgnores(["dist", "./*.js", "./*.mjs", "./*.cjs", "./*.ts"]),
   {
     languageOptions: {
       parserOptions: {

@@ -10,7 +10,7 @@ export const command = "crawl <url>";
 export const describe = "Crawl new site";
 export const aliases = ["c"];
 
-export function builder(yargs: Argv<CrawlArgv>): Argv {
+export function builder(yargs: Argv): Argv<CrawlArgv> {
   return yargs.positional("url", {
     type: "string",
     description: "url to site",
@@ -19,6 +19,7 @@ export function builder(yargs: Argv<CrawlArgv>): Argv {
 }
 
 export function handler(argv: ArgumentsCamelCase<CrawlArgv>) {
+  console.log("hi???");
   const url = argv.url;
-  logger.success(green(`crawling ${url}`));
+  logger.box(green(`crawling ${url}`));
 }
